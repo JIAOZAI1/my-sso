@@ -13,7 +13,7 @@
           <el-checkbox v-model="remember">记住密码</el-checkbox>
         </el-form-item>
         <el-form-item>
-          <el-button type="primary" :loading="loading" @click="onSubmit">登录</el-button>
+          <el-button type="primary" :loading="loading" @click="onSubmit" style="width:100%;">登录</el-button>
         </el-form-item>
       </el-form>
     </el-card>
@@ -92,22 +92,55 @@ export default {
 </script>
 
 <style scoped>
-.login-wrap{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:100vh;
-  padding:20px;
+.login-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
-.login-card{
-  width:420px;
-  max-width:100%;
+.login-card {
+  width: 420px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 20px;
 }
-.title{
-  text-align:center;
-  margin-bottom:20px;
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
 }
-@media (max-width:480px){
-  .login-card{ width:100%; }
+.login-form {
+  margin-top: 20px;
+}
+.el-form-item {
+  margin-bottom: 25px;
+}
+.el-input__inner {
+  height: 48px;
+  line-height: 48px;
+  border-radius: 8px;
+}
+.el-button {
+  height: 48px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+@media (max-width: 480px) {
+  .login-card {
+    width: 100%;
+    padding: 15px;
+  }
+  .title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .el-form-item {
+    margin-bottom: 20px;
+  }
 }
 </style>
