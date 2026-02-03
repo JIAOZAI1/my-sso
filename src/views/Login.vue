@@ -1,6 +1,9 @@
 <template>
   <div class="login-wrap">
     <el-card class="login-card">
+      <div class="logo-container">
+        <img src="/src/assets/logo.svg" alt="Logo" class="logo">
+      </div>
       <h2 class="title">单点登录（SSO）</h2>
       <el-form :model="form" ref="formRef" class="login-form" @submit.native.prevent>
         <el-form-item>
@@ -106,6 +109,14 @@ export default {
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
   padding: 20px;
+}
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.logo {
+  width: 80px;
+  height: 80px;
 }
 .title {
   text-align: center;
